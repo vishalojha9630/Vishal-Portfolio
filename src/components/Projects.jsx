@@ -12,28 +12,28 @@ const Projects = () => {
       id: 1,
       name: "IMS-DIA",
       image: IMSDIA,
-      github: "",
+      github: "https://github.com/vishalojha9630/IMS-DIA",
       live: "https://imsdia.com/",
     },
     {
       id: 2,
       name: "AppuCakes",
       image: Appucakes,
-      github: "",
+      github: "https://github.com/vishalojha9630/appu-cakes",
       live: "https://appucakes.com/",
     },
     {
       id: 3,
       name: "P3nnywise (Mobile App)",
       image: Pennywise,
-      github: "",
+      github: "https://github.com/vishalojha9630/P3nnywise",
       live: "https://play.google.com/store/apps/details?id=com.pennywises.app&pcampaignid=web_share",
     },
     {
       id: 4,
       name: "Retail-POS",
       image: RetailPOS,
-      github: "",
+      github: "https://github.com/vishalojha9630/Retail-POS",
       live: "",
     }
   ];
