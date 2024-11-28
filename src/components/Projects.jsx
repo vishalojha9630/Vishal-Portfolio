@@ -3,45 +3,54 @@ import IMSDIA from '../assets/projects/ims-dia.png'
 import Pennywise from '../assets/projects/pennywise.png'
 import Appucakes from '../assets/projects/appucakes.png'
 import RetailPOS from '../assets/projects/retailpos.png'
+import CollegeFAQS from '../assets/projects/college-faqs.png'
+
+
+const project = [
+  {
+    id: 1,
+    name: "CollegeFAQ",
+    image: CollegeFAQS,
+    github: "https://github.com/vishalojha9630/college-faqs",
+    live: "https://collegefaqs.com/",
+  },
+  {
+    id: 2,
+    name: "AppuCakes",
+    image: Appucakes,
+    github: "https://github.com/vishalojha9630/appu-cakes",
+    live: "https://appucakes.com/",
+  },
+  {
+    id: 3,
+    name: "P3nnywise (Mobile App)",
+    image: Pennywise,
+    github: "https://github.com/vishalojha9630/P3nnywise",
+    live: "https://play.google.com/store/apps/details?id=com.pennywises.app&pcampaignid=web_share",
+  },
+  {
+    id: 4,
+    name: "Retail-POS",
+    image: RetailPOS,
+    github: "https://github.com/vishalojha9630/Retail-POS",
+    live: "https://pos.piecodes.in/login",
+  },
+  {
+    id: 5,
+    name: "IMS-DIA",
+    image: IMSDIA,
+    github: "https://github.com/vishalojha9630/IMS-DIA",
+    live: "https://imsdia.com/",
+  }
+];
 
 
 const Projects = () => {
 
-  const project = [
-    {
-      id: 1,
-      name: "IMS-DIA",
-      image: IMSDIA,
-      github: "https://github.com/vishalojha9630/IMS-DIA",
-      live: "https://imsdia.com/",
-    },
-    {
-      id: 2,
-      name: "AppuCakes",
-      image: Appucakes,
-      github: "https://github.com/vishalojha9630/appu-cakes",
-      live: "https://appucakes.com/",
-    },
-    {
-      id: 3,
-      name: "P3nnywise (Mobile App)",
-      image: Pennywise,
-      github: "https://github.com/vishalojha9630/P3nnywise",
-      live: "https://play.google.com/store/apps/details?id=com.pennywises.app&pcampaignid=web_share",
-    },
-    {
-      id: 4,
-      name: "Retail-POS",
-      image: RetailPOS,
-      github: "https://github.com/vishalojha9630/Retail-POS",
-      live: "",
-    }
-  ];
-
   return (
     <div name='projects' className='w-full h-screen text-gray-300 bg-[#0a192f]'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div className='pb-8'>
+        <div className=''>
           <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>
             Projects
           </p>

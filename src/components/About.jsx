@@ -13,12 +13,7 @@ const About = () => {
         </div>
         
         <div className='max-w-[1000px] w-full grid gap-8 px-4'>
-          <p>Experienced Frontend Developer with 2 years of hands-on experience in
-            designing, developing, and maintaining Web and Mobile applications.
-            Proficient in JavaScript, ReactJS, Redux, TypeScript, React Native, NextJs.
-            Skilled in collaborating with cross-functional teams to deliver high-quality
-            solutions that meet client requirements. A passion for learning new
-            technologies & methodologies and I'm focused on Full Stack development.</p>
+          <p>Experienced Frontend Developer with 3 years of hands-on experience in designing, developing, and maintaining Web and Mobile applications. Proficient in JavaScript(ES6+), React.js, React-Native, Redux Toolkit, TypeScript, Next.js, GraphQL, REST API, StoryBook, HTML5, CSS3, Bootstrap, Tailwind CSS, WordPress CMS. Skilled in collaborating with cross-functional teams to deliver high-quality solutions that meet client requirements. A passion for learning new technologies & methodologies and I'm focused on Full Stack development.</p>
         </div>
       </div>
     </div>
