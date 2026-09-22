@@ -15,15 +15,15 @@ export default function Stack() {
 
         {/* Section Header */}
         <div>
-          <span className="font-mono text-xs font-semibold uppercase tracking-widest text-accent-amber">
+          <span className="font-mono text-sm font-semibold uppercase tracking-widest text-accent-amber">
             SKILLS
           </span>
           <div className="mt-3 grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-6 items-end">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-[1.15]">
-              Backend depth, AI systems, and full-stack execution.
+              Frontend engineering, design systems, and mobile execution.
             </h2>
             <p className="text-sm leading-relaxed text-slate-400">
-              A practical stack built around scalable APIs, database performance, distributed architectures, and modern product delivery.
+              A modern stack focused on building pixel-perfect user interfaces, high-performance web applications, and seamless cross-platform mobile experiences.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Stack() {
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <h3 className="text-base font-bold text-white group-hover:text-accent-teal transition-colors">
+                  <h3 className="text-base font-bold text-white">
                     {skill.name}
                   </h3>
                   <span className="rounded border border-white/10 bg-[#121a2d] px-2 py-0.5 font-mono text-xs text-accent-teal">
@@ -68,11 +68,11 @@ export default function Stack() {
                 />
               </div>
 
-              <div className="pt-1">
-                <span className="rounded-full border border-white/10 bg-[#121a2d] px-3 py-0.5 font-mono text-[10px] text-slate-400">
+              {/* <div className="pt-1">
+                <span className="rounded-full border border-white/10 bg-[#121a2d] px-3 py-0.5 font-mono text-[12.5px] text-slate-400">
                   Featured
                 </span>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

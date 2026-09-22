@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { profile } from "@/lib/data";
-import { Mail, MapPin, Copy, Check, Send } from "lucide-react";
+import { Mail, MapPin, Copy, Check, Send, Loader2 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
   const handleCopyEmail = () => {
@@ -16,11 +18,56 @@ export default function Contact() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setFormData({ name: "", email: "", message: "" });
+    setLoading(true);
+    setError(null);
+
+    const accessKey = process.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
+
+    try {
+      if (!accessKey) {
+        // Fallback: If no API key is provided yet, fallback to mailto or show graceful alert
+        window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
+          `Portfolio Inquiry from ${formData.name}`
+        )}&body=${encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        )}`;
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+        return;
+      }
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Portfolio Message from ${formData.name}`,
+          from_name: "Vishal Portfolio",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setSubmitted(false), 6000);
+      } else {
+        setError(result.message || "Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      setError("Network error. Please try again or reach out via email directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -31,7 +78,7 @@ export default function Contact() {
 
         {/* Section Header */}
         <div>
-          <span className="font-mono text-xs font-semibold uppercase tracking-widest text-accent-amber">
+          <span className="font-mono text-sm font-semibold uppercase tracking-widest text-accent-amber">
             CONTACT
           </span>
           <div className="mt-3 grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-6 items-end">
@@ -189,12 +236,28 @@ export default function Contact() {
                   />
                 </div>
 
+                {error && (
+                  <div className="p-3 bg-rose-500/10 border border-rose-500/30 rounded-xl text-xs text-rose-300">
+                    {error}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-accent-teal/50 bg-accent-teal/20 hover:bg-accent-teal/30 px-5 py-3 text-sm font-semibold text-accent-teal transition-all shadow-md"
+                  disabled={loading}
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-accent-teal/50 bg-accent-teal/20 hover:bg-accent-teal/30 disabled:opacity-50 disabled:cursor-not-allowed px-5 py-3 text-sm font-semibold text-accent-teal transition-all shadow-md"
                 >
-                  <Send className="h-4 w-4" />
-                  <span>Send Message</span>
+                  {loading ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      <span>Sending message...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-4 w-4" />
+                      <span>Send Message</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}
@@ -206,9 +269,9 @@ export default function Contact() {
           <p>
             © {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>
-          <p>
+          {/* <p>
             Designed &amp; Built with Next.js, TypeScript &amp; Tailwind CSS
-          </p>
+          </p> */}
         </div>
       </div>
     </section>

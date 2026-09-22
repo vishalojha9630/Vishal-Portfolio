@@ -9,17 +9,17 @@ export default function ImpactResume() {
         {/* Left Card: IMPACT */}
         <div className="bg-[#0d1424] border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl flex flex-col justify-between space-y-8">
           <div>
-            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-accent-amber">
+            <span className="font-mono text-sm font-semibold uppercase tracking-widest text-accent-amber">
               IMPACT
             </span>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-3">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight">
                 Latency reduced, systems scaled, migrations stabilized.
               </h2>
-              <button className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#0a0f1d] px-3.5 py-1.5 text-xs font-mono text-slate-300 hover:border-white/20 whitespace-nowrap self-start sm:self-center">
-                <Award className="h-3.5 w-3.5 text-accent-amber" />
-                <span>See all achievements</span>
-              </button>
+              {/* <button className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#0a0f1d] px-3.5 py-1.5 text-xs font-mono text-slate-300 hover:border-white/20 whitespace-nowrap self-start sm:self-center">
+                  <Award className="h-3.5 w-3.5 text-accent-amber" />
+                  <span>See all achievements</span>
+                </button> */}
             </div>
           </div>
 

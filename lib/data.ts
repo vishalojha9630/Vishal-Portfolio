@@ -10,7 +10,7 @@ export const profile = {
   github: "https://github.com/vishalojha9630",
   linkedin: "https://linkedin.com/in/vishalojha2806",
   githubHandle: "@vishalojha9630",
-  resumeUrl: "#",
+  resumeUrl: "https://docs.google.com/document/d/1pZECxaDOE2Io6X4JDvjMc0Ls6CEukobRMguJOAQMOi0/edit?usp=sharing",
 };
 
 export const heroRoles = [
@@ -63,27 +63,27 @@ export const experience = [
     company: "RayMach Technologies",
     location: "Dehradun, IN",
     summary:
-      "Leading frontend architecture for mission-critical enterprise platforms and real-time operations systems. Spearheading performance optimization and AI-driven UI modules.",
+      "Leading frontend architecture for mission-critical enterprise platforms and real-time operations systems. Spearheading performance optimization & UI modules.",
     highlights: [
       "Architected the flagship StatMach FlightOps platform with 15+ live modules for airline fleet tracking and telemetry visualization.",
-      "Engineered real-time WebSocket synchronization handling 5,000+ simultaneous events with sub-50ms latency.",
+      "Led rigorous code reviews enforced modern React/Redux best practices, reducing technical debt & overall codebase maintainability.",
       "Reduced bundle size by 42% and improved Core Web Vitals to 98+ through code splitting, tree shaking, and SSR caching.",
     ],
-    tags: ["Next.js", "React.js", "TypeScript", "Redux Toolkit", "WebSockets", "Tailwind CSS"],
+    tags: ["JavaScript", "React.js", "PWA", "Redux Toolkit", "Tailwind CSS", "Material UI", "React Testing Library", "REST APIs"],
   },
   {
     period: "SEP 2024 — FEB 2025",
-    role: "Frontend Developer",
+    role: "React Native Developer",
     company: "PM Publishers",
     location: "Noida, IN",
     summary:
-      "Designed and deployed interactive digital learning platforms, responsive web applications, and rich educational dashboards reaching 100k+ students and educators.",
+      "Designed interactive digital learning platforms, responsive mobile applications, and rich educational dashboards.",
     highlights: [
-      "Built dynamic test engine and assessment analytics suite with comprehensive SVG/Canvas visualization.",
-      "Implemented seamless OAuth 2.0 / SSO integration and state persistence across multi-tab sessions.",
-      "Engineered accessible WCAG 2.1 AA compliant UI components used across 6 regional portals.",
+      "Architected the client of the Learning Management System app for Android & iOS using React-Native, Reusable Components & Hooks.",
+      "Delivered key LMS features of app JavaScript, React-Native & Redux Toolkit to enhance user experience and overall app performance.",
+      "Established a scalable component library with React hooks, reducing feature development time by ~30%.",
     ],
-    tags: ["React.js", "JavaScript", "Tailwind CSS", "REST APIs", "Jest", "CSS Modules"],
+    tags: ["React Native", "React.js", "JavaScript", "Redux Toolkit", "REST APIs"],
   },
   {
     period: "FEB 2022 — AUG 2024",
@@ -91,21 +91,33 @@ export const experience = [
     company: "PieCodes",
     location: "GUNA, IN",
     summary:
-      "Shipped cross-platform mobile apps and client-facing web portals. Built modular component libraries and integrated complex backend microservices.",
+      "Engineered & shipped high-performance web & cross-platform mobile applications, building scalable architectures & reusable UI component.",
     highlights: [
-      "Developed 4 high-traffic mobile applications using React Native with offline-first SQLite sync and push notifications.",
+      "Developed mobile applications using React Native, React Components & Hooks with push notifications.",
       "Refactored legacy single-page apps into modern React functional architecture, reducing bug reports by 35%.",
-      "Collaborated directly with UX designers to create pixel-perfect design systems in Figma and implemented them in Material UI.",
+      "Partnered with product & UX teams to deliver a content-management application from Figma wireframes to production, implementing pixel-perfect design systems.",
     ],
-    tags: ["React Native", "React.js", "Material UI", "Redux", "REST APIs", "Firebase"],
+    tags: ["JavaScript", "React.js", "React Native", "TypeScript", "Redux Toolkit", "REST APIs", "GraphQL"],
   },
 ];
 
 export const skills = [
   {
+    name: "JavaScript(ES6+)",
+    category: "LANGUAGE",
+    percentage: 96,
+    featured: true,
+  },
+  {
     name: "React.js",
     category: "FRONTEND",
-    percentage: 96,
+    percentage: 95,
+    featured: true,
+  },
+  {
+    name: "React Native",
+    category: "MOBILE",
+    percentage: 90,
     featured: true,
   },
   {
@@ -121,75 +133,62 @@ export const skills = [
     featured: true,
   },
   {
-    name: "React Native",
-    category: "MOBILE",
-    percentage: 90,
-    featured: true,
-  },
-  {
-    name: "Redux & Zustand",
+    name: "Redux Toolkit",
     category: "STATE MANAGEMENT",
     percentage: 93,
-    featured: true,
-  },
-  {
-    name: "Tailwind CSS",
-    category: "STYLING & UI",
-    percentage: 96,
     featured: true,
   },
 ];
 
 export const allSkillsList = [
-  "React.js",
-  "Next.js (App Router)",
-  "TypeScript",
-  "React Native",
-  "Redux Toolkit",
-  "Zustand",
+  "Python",
   "Tailwind CSS",
   "Material UI",
-  "JavaScript (ES6+)",
-  "HTML5 / CSS3",
-  "WebSockets",
+  "HTML5/CSS3",
+  "Bootstrap 5",
+  "TanStack",
+  "Formik",
+  "Yup",
+  "Firebase",
+  "PWA",
+  "Git & GitHub",
+  "WordPress & Shopify CMS",
   "REST & GraphQL APIs",
+  "React Testing Library",
   "Performance Optimization",
-  "Design Systems",
-  "Jest & React Testing Library",
-  "Git & CI/CD Pipelines",
 ];
 
 export const projects = [
   {
-    category: "ENTERPRISE / REALTIME / REACT",
-    title: "StatMach FlightOps Dashboard & Fleet Tracker",
+    category: "AIRLINE OPERATIONS",
+    title: "Synchronised Pilot Log (SPL)",
     description:
-      "Enterprise airline operations platform built for Air India Express featuring 15+ real-time modules, telemetry visualization, sub-second flight status sync, and role-based crew dispatching.",
-    tags: ["React.js", "TypeScript", "Redux Toolkit", "WebSockets", "Tailwind CSS", "Recharts"],
+      "Enterprise-grade Progressive Web App (PWA) engineered for airline operations with AIX Outlook SSO. Streamlines commercial & pilot training flight logging including OOOI timings, Techlog, and Take-off/Landing metrics backed by a multi-tiered approval workflow (Pilot → Co-pilot → Admin) with complete audit trails.",
+    tags: ["JavaScript", "React.js", "PWA(Progressive Web App)", "Redux Toolkit", "Tailwind CSS", "React Testing Library"],
     link: "#",
   },
   {
-    category: "FINTECH / FULL STACK / NEXT.JS",
-    title: "FinEdge Multi-Currency Wallet & Analytics Hub",
+    category: "AIRLINE OPERATIONS / ENTERPRISE DASHBOARD",
+    title: "StatMach FlightOps Dashboard",
     description:
-      "High-security financial operations dashboard combining real-time multi-asset tracking, rule-driven cashback bonuses, and AI-powered transaction classification.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Chart.js", "PostgreSQL", "Prisma"],
+      "Architected a 15+ module enterprise dashboard for Air India Express stakeholders covering Crew Utilization, Leave Tracking, Operational Stats, and Cost Analysis engineered with custom zero dependency viewport scaling to guarantee flawless UI readability across 100%-200% browser zoom levels.",
+    tags: ["React.js", "JavaScript", "Tailwind CSS", "Redux Toolkit", "Chart.js", "REST APIs"],
     link: "#",
   },
   {
     category: "AI PLATFORM / AGENTIC UI / FRONTEND",
-    title: "Aura AI Studio — Prompt-to-UI Component Builder",
+    title: "Book My Party - Venue Booking",
     description:
-      "Interactive generative AI workspace allowing developers to prompt, preview, edit, and export production-ready Tailwind and React components with real-time sandbox execution.",
-    tags: ["React.js", "Next.js", "OpenAI API", "Monaco Editor", "Tailwind CSS"],
+      "Developed a seamless online platform for booking party venues across multiple cities. Engineered the complete client-facing interface featuring role-based authentication, advanced search with precise filtering (price, capacity, location, amenities), and a responsive 360° venue panorama viewer. Implemented a real-time booking system with calendar synchronization, automatic confirmation workflows, and secure payment gateway integration.",
+    tags: ["React.js", "Next.js", "JavaScript", "TypeScript", "Redux Toolkit", "Bootstrap 5", "GraphQL APIs", "WordPress CMS"],
     link: "#",
   },
   {
-    category: "MOBILE / OFFLINE-FIRST / REACT NATIVE",
-    title: "QuickPulse Mobile Commerce & Delivery App",
+    category: "MOBILE APPLICATION / REACT NATIVE",
+    title: "LMS(Learning Management System)",
     description:
-      "High-performance cross-platform iOS & Android e-commerce application with background geolocation tracking, offline cart sync, biometric authentication, and smooth 60fps micro-interactions.",
-    tags: ["React Native", "TypeScript", "Redux Toolkit", "SQLite", "Firebase"],
+      "Cross-platform (Android & iOS) EdTech mobile application engineered with React Native and Redux Toolkit. Enables teachers to assign structured Master Learning Plans (MLP) and review student analytics, while empowering students to take assessments and create self-evaluations with real-time scoring. Built on a modular architecture that reduced UI code duplication by 40%.",
+    tags: ["React Native", "React.js", "JavaScript", "REST APIs", "TypeScript", "Redux Toolkit", "Firebase"],
     link: "#",
   },
 ];
@@ -197,14 +196,14 @@ export const projects = [
 export const impactMetrics = [
   {
     company: "RAYMACH TECHNOLOGIES",
-    title: "Optimized critical dashboard response & render times from 1.8s to 180ms",
+    title: "Accelerated enterprise dashboard render times from 1.8s to 180ms",
     description:
-      "Architected virtualized rendering for 10,000+ real-time flight telemetries, optimized re-renders with selective Redux selectors, and streamlined WebSocket event batching.",
+      "Engineered zero-dependency viewport scaling for 15+ modules across 100%–200% zoom levels, reduced bundle size by 42%, and achieved 98+ Core Web Vitals via code-splitting.",
   },
   {
-    company: "PIECODES & PM PUBLISHERS",
-    title: "Architected unified design system across 4+ web and mobile products",
+    company: "PIECODES",
+    title: "Architected unified design system across 4+ web & mobile products",
     description:
-      "Standardized 50+ reusable accessible components with tokenized theme engine, cutting sprint UI development turnaround time by 40% and eliminating cross-browser regressions.",
+      "Standardized 50+ modular, accessible UI components with tokenized theme systems in React.js & React Native, cutting sprint delivery time by 40% and eliminating regressions.",
   },
 ];
