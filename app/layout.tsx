@@ -21,9 +21,9 @@ import "./globals.css";
 // });
 
 export const metadata: Metadata = {
-  title: "Vishal Ojha — Frontend & Mobile Developer",
+  title: "Vishal Ojha | Senior Frontend Developer",
   description:
-    "Frontend & Mobile Developer building scalable web & mobile apps with high performance and scalability.",
+    "Senior Frontend Developer building scalable web & mobile apps with high performance and scalability.",
 };
 
 export default function RootLayout({
