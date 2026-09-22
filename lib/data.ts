@@ -9,6 +9,7 @@ export const profile = {
   email: "vishalojha9630@gmail.com",
   github: "https://github.com/vishalojha9630",
   linkedin: "https://linkedin.com/in/vishalojha2806",
+  githubHandle: "@vishalojha9630",
   resumeUrl: "#",
 };
 
